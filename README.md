@@ -51,6 +51,17 @@ After installation:
 .venv/bin/python bot.py
 ```
 
+## Docker
+
+```bash
+cp .env.example .env
+docker compose up -d --build
+```
+
+## systemd
+
+For long-running Linux deployments, see [systemd deployment](docs/systemd.md).
+
 ## Configuration
 
 The installer writes `.env`. You can also create it manually from `.env.example`.
@@ -200,6 +211,14 @@ These are covered by `.gitignore`.
 - Keep `.env` private.
 - Use a strong `WEBHOOK_SECRET_TOKEN` in webhook mode.
 
+## Roadmap
+
+See [ROADMAP.md](ROADMAP.md).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
-Choose a license before publishing, for example MIT, Apache-2.0, or AGPL-3.0.
+MIT. See [LICENSE](LICENSE).

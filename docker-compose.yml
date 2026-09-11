@@ -1,0 +1,11 @@
+services:
+  telegram-customer-bot:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./locales:/app/locales:ro
+    ports:
+      - "7024:7024"

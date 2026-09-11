@@ -9,3 +9,5 @@ __pycache__/
 *.log
 .DS_Store
 Thumbs.db
+.pytest_cache/
+.coverage
