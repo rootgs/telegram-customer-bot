@@ -61,6 +61,10 @@ WEBHOOK_SECRET_TOKEN=replace_with_a_random_secret
 http://127.0.0.1:7024/telegram-webhook
 ```
 
+## Proxy
+
+Если сервер не может подключиться к Telegram напрямую, задайте `PROXY_URL`, например `http://127.0.0.1:7890` или `socks5://127.0.0.1:1080`.
+
 ## Команды
 
 ```text

@@ -37,6 +37,8 @@ WEBHOOK_PATH = os.getenv("WEBHOOK_PATH", "telegram-webhook")
 WEBHOOK_SECRET_TOKEN = os.getenv("WEBHOOK_SECRET_TOKEN", "")
 LANGUAGE = os.getenv("LANGUAGE", "en")
 LOCALES_DIR = Path(os.getenv("LOCALES_DIR", "locales"))
+PROXY_URL = os.getenv("PROXY_URL", "")
+GET_UPDATES_PROXY_URL = os.getenv("GET_UPDATES_PROXY_URL", "")
 LEGACY_DATA_FILE = Path("data/message_map.json")
 LEGACY_SETTINGS_FILE = Path("data/settings.json")
 DEFAULT_WELCOME_MESSAGE = "Hello, please send your question. Support will reply as soon as possible."
@@ -879,7 +881,12 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> N
 def main() -> None:
     require_bot_token()
     init_db()
-    app = Application.builder().token(BOT_TOKEN).build()
+    builder = Application.builder().token(BOT_TOKEN)
+    if PROXY_URL:
+        builder.proxy_url(PROXY_URL)
+    if GET_UPDATES_PROXY_URL:
+        builder.get_updates_proxy_url(GET_UPDATES_PROXY_URL)
+    app = builder.build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("whoami", whoami))

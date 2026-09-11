@@ -114,6 +114,16 @@ def main() -> None:
         "BOT_MODE": bot_mode,
     }
 
+    use_proxy = ask_choice("Use proxy for Telegram API", ["no", "yes"], "no")
+    if use_proxy == "yes":
+        proxy_url = ask("Proxy URL, for example http://127.0.0.1:7890 or socks5://127.0.0.1:1080")
+        get_updates_proxy_url = ask("Proxy URL for polling getUpdates, leave empty to use the same proxy", proxy_url)
+        values["PROXY_URL"] = proxy_url
+        values["GET_UPDATES_PROXY_URL"] = get_updates_proxy_url
+    else:
+        values["PROXY_URL"] = ""
+        values["GET_UPDATES_PROXY_URL"] = ""
+
     if bot_mode == "webhook":
         while True:
             webhook_url = ask("Edge public HTTPS URL, for example https://bot.example.com")

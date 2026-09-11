@@ -61,6 +61,10 @@ WEBHOOK_SECRET_TOKEN=replace_with_a_random_secret
 http://127.0.0.1:7024/telegram-webhook
 ```
 
+## Proxy
+
+إذا لم يستطع الخادم الاتصال بتليجرام مباشرة، اضبط `PROXY_URL` مثل `http://127.0.0.1:7890` أو `socks5://127.0.0.1:1080`.
+
 ## الأوامر
 
 ```text

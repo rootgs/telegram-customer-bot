@@ -53,6 +53,8 @@ DB_FILE=data/bot.sqlite3
 LANGUAGE=zh-CN
 LOCALES_DIR=locales
 BOT_MODE=polling
+PROXY_URL=
+GET_UPDATES_PROXY_URL=
 ```
 
 ## 获取客服 Chat ID
@@ -71,6 +73,28 @@ BOT_MODE=polling
 ```
 
 Polling 是最简单的运行方式，不需要公网域名、HTTPS、反向代理或边缘节点。
+
+## 代理
+
+某些地区或服务器无法直接连接 Telegram，可以配置代理：
+
+```env
+PROXY_URL=http://127.0.0.1:7890
+```
+
+也支持 SOCKS 代理：
+
+```env
+PROXY_URL=socks5://127.0.0.1:1080
+```
+
+Polling 模式下，也可以单独设置 `getUpdates` 使用的代理：
+
+```env
+GET_UPDATES_PROXY_URL=socks5://127.0.0.1:1080
+```
+
+Linux 安装脚本会在安装过程中询问是否启用代理，并自动写入这些配置。
 
 ## Webhook 模式
 

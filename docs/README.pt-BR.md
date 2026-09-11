@@ -61,6 +61,10 @@ O instalador valida se o domínio HTTPS resolve corretamente. Para edge node, t�
 http://127.0.0.1:7024/telegram-webhook
 ```
 
+## Proxy
+
+Se o servidor não conseguir conectar diretamente ao Telegram, configure `PROXY_URL`, por exemplo `http://127.0.0.1:7890` ou `socks5://127.0.0.1:1080`.
+
 ## Comandos
 
 ```text

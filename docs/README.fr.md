@@ -61,6 +61,10 @@ L'installateur vérifie que le domaine HTTPS se résout correctement. Avec un ed
 http://127.0.0.1:7024/telegram-webhook
 ```
 
+## Proxy
+
+Si le serveur ne peut pas se connecter directement à Telegram, configurez `PROXY_URL`, par exemple `http://127.0.0.1:7890` ou `socks5://127.0.0.1:1080`.
+
 ## Commandes
 
 ```text

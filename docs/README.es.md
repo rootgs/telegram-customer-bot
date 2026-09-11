@@ -65,6 +65,10 @@ El instalador valida que el dominio HTTPS resuelva correctamente. Si usas un nod
 http://127.0.0.1:7024/telegram-webhook
 ```
 
+## Proxy
+
+Si el servidor no puede conectarse directamente a Telegram, configura `PROXY_URL`, por ejemplo `http://127.0.0.1:7890` o `socks5://127.0.0.1:1080`.
+
 ## Comandos principales
 
 ```text

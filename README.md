@@ -73,6 +73,8 @@ DB_FILE=data/bot.sqlite3
 LANGUAGE=en
 LOCALES_DIR=locales
 BOT_MODE=polling
+PROXY_URL=
+GET_UPDATES_PROXY_URL=
 ```
 
 ## Getting The Support Chat ID
@@ -91,6 +93,28 @@ BOT_MODE=polling
 ```
 
 Polling is the easiest mode. It does not need a public domain, HTTPS, reverse proxy, or edge node.
+
+## Proxy
+
+Some regions or servers cannot connect to Telegram directly. Configure a proxy when needed:
+
+```env
+PROXY_URL=http://127.0.0.1:7890
+```
+
+SOCKS proxies are also supported:
+
+```env
+PROXY_URL=socks5://127.0.0.1:1080
+```
+
+For polling mode, you may optionally set a separate proxy for `getUpdates`:
+
+```env
+GET_UPDATES_PROXY_URL=socks5://127.0.0.1:1080
+```
+
+The Linux installer can write these values during setup.
 
 ## Webhook Mode
 
