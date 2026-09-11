@@ -1,0 +1,11 @@
+{
+  "welcome_message": "Bonjour, envoyez votre question. Le support vous répondra dès que possible.",
+  "support_start": "Le mode support est activé. Répondez directement au message d'un client et le bot lui transmettra la réponse.",
+  "btn_history": "Historique",
+  "btn_set_note": "Noter",
+  "btn_show_note": "Voir note",
+  "btn_block": "Bloquer",
+  "btn_unblock": "Débloquer",
+  "customer_profile_title": "Profil client",
+  "reply_sent": "Réponse envoyée au client."
+}

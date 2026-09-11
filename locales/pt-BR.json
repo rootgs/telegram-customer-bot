@@ -1,0 +1,11 @@
+{
+  "welcome_message": "Olá, envie sua dúvida. O suporte responderá assim que possível.",
+  "support_start": "Modo de suporte ativado. Responda diretamente a uma mensagem do cliente e o bot enviará a resposta.",
+  "btn_history": "Histórico",
+  "btn_set_note": "Anotar",
+  "btn_show_note": "Ver nota",
+  "btn_block": "Bloquear",
+  "btn_unblock": "Desbloquear",
+  "customer_profile_title": "Perfil do cliente",
+  "reply_sent": "Resposta enviada ao cliente."
+}
